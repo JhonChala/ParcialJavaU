@@ -1,0 +1,21 @@
+version: "3"
+services:
+  app:
+    container_name: "MYSQLParcialContainer"
+    build: src/main/resources
+    ports:
+        - "8081:8081"
+    environment:
+      - DATABASE_URL=jdbc:mysql://localhost:3306/Tienda
+      - DATABASE_USERNAME=root
+      - DATABASE_PASSWORD=1234
+
+
+volumes:
+  mysql-data:
+    external: false
+
+
+
+
+
